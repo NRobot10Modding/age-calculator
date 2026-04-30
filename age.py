@@ -42,11 +42,11 @@ def run(event):
     getDay()
 
     bdayBox = document.querySelector("#dayIn")
-    bday = bdayBox.value
+    bday = int(bdayBox.value)
     bmonBox = document.querySelector("#monIn")
-    bmon = bmonBox.value
+    bmon = int(bmonBox.value)
     byearBox = document.querySelector("#yearIn")
-    birth_year = byearBox.value
+    birth_year = int(byearBox.value)
 
     yearAge = year - birth_year
     monAge = month - bmon

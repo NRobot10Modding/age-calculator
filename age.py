@@ -48,6 +48,8 @@ def getDay():
 #--------Get user data----------
 
 def calc():
+
+    global month
     
     getDay()
 

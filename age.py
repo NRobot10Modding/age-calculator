@@ -3,8 +3,11 @@ from pyscript import document
 output_div = document.querySelector("#outputField")
 
 from time import localtime
+global year
 year = localtime().tm_year
+global month
 month = localtime().tm_mon
+global day
 day = localtime().tm_mday
 
 #-----------Prep---------

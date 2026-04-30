@@ -50,6 +50,7 @@ def getDay():
 def calc():
 
     global month
+    global output_div
     
     getDay()
 

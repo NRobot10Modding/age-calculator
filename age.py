@@ -1,9 +1,6 @@
 #--------Get data--------
 
 def run(event):
-    
-    setup()
-
     from pyscript import document
     output_div = document.querySelector("#outputField")
 

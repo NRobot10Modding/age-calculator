@@ -3,6 +3,8 @@
 def run(event):
 
     global document
+    global output_div
+
     from pyscript import document as document
     output_div = document.querySelector("#outputField")
 

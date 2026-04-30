@@ -38,7 +38,7 @@ def getDay():
 
 #--------Get user data----------
 
-def run():
+def run(event):
     getDay()
 
     bdayBox = document.querySelector("#dayIn")

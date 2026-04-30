@@ -47,10 +47,6 @@ def getDay():
 
 def calc():
     
-    global day
-    global month
-    global year
-    
     getDay()
 
     bdayBox = document.querySelector("#dayIn")

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+	<title>Age Calculator</title>
+	<link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	<link rel="stylesheet" href="https://pyscript.net/releases/2026.3.1/core.css">
+	<script type="module" src="https://pyscript.net/releases/2026.3.1/core.js"></script>
+</head>
+<body>
+	<h1>Age Calculator</h1>
+	<h2>By roboman</h2><br>
+	<hr><br><br>
+	<label for="dayIn">Day:</label>
+	<input type="text" id="dayIn" name="dayIn"><br><br>
+	<label for="monIn">Month:</label>
+	<input type="text" id="monIn" name="monIn"><br><br>
+	<label for="yearIn">Year:</label>
+	<input type="text" id="yearIn" name="yearIn"><br><br>
+	<button py-click="run" id="goButton">Calculate</button>
+	<script type="py" src="./age.py"></script>
+	<div id="outputField"></div>
+</body>

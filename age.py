@@ -22,7 +22,7 @@ def getDay():
     global leap
     leap = 'false'
     global monDays
-    if month == 1 or 3 or 5 or 7 or 8 or 10 or 12:
+    if month in (1, 3, 5, 7, 8, 10, 12):
         monDays = 31
 
     if month == 2:
@@ -37,7 +37,7 @@ def getDay():
             monDays = 29
             leap = 'true'
 
-    if month == 4 or 6 or 9 or 11:
+    if month in (4, 6, 9, 11):
         monDays = 30
     print(f'Year: {year}')
     print(f'Month: {month}')

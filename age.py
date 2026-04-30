@@ -1,7 +1,9 @@
 #--------Get data--------
 
 def run(event):
-    from pyscript import document
+
+    global document
+    from pyscript import document as document
     output_div = document.querySelector("#outputField")
 
     from time import localtime

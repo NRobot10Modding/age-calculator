@@ -69,9 +69,15 @@ def run(event):
     except ValueError:
         yearErrorOut.innerText = "Please input a valid integer"
 
-    yearAge = year - birth_year
-    monAge = month - bmon
-    dayAge = day - bday
+    try:
+        yearAge = year - birth_year
+    except UnboundLocalError
+    try:
+        monAge = month - bmon
+    except UnboundLocalError
+    try:
+        dayAge = day - bday
+    except UnboundLocalError
 
     #-Determine whether or not the month should be classed as before your birthday or after and doing maths to use that and output
 

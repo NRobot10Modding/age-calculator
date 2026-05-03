@@ -37,6 +37,7 @@ def run(event):
 
     global year
     global month
+    global day
     global document
     global output_div
 

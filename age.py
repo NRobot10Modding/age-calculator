@@ -1,5 +1,6 @@
 #--------Get data--------
 
+from time import local time as lt
 from pyscript import document
 output_div = document.querySelector("#outputField")
 
@@ -7,10 +8,10 @@ output_div = document.querySelector("#outputField")
 
 def getDay():
 
-    from time import localtime
-    year = localtime().tm_year
-    month = localtime().tm_mon
-    day = localtime().tm_mday
+    global lt
+    year = lt().tm_year
+    month = lt().tm_mon
+    day = lt().tm_mday
 
     global leap
     leap = 'false'

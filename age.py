@@ -8,11 +8,6 @@ output_div = document.querySelector("#outputField")
 
 def getDay():
 
-    global lt
-    year = lt().tm_year
-    month = lt().tm_mon
-    day = lt().tm_mday
-
     global leap
     leap = 'false'
     global monDays
@@ -39,6 +34,11 @@ def getDay():
 #--------Get user data----------
 
 def run(event):
+
+    global lt
+    year = lt().tm_year
+    month = lt().tm_mon
+    day = lt().tm_mday
 
     global month
     global document

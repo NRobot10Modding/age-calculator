@@ -54,18 +54,21 @@ def run(event):
     try:
         bdayBox = document.querySelector("#dayIn")
         bday = int(bdayBox.value)
+        dayErrorOut.innerText = ""
     except ValueError:
         dayErrorOut.innerText = "Please input a valid integer"
 
     try:
         bmonBox = document.querySelector("#monIn")
         bmon = int(bmonBox.value)
+        monErrorOut.innerText = ""
     except ValueError:
         monErrorOut.innerText = "Please input a valid integer"
 
     try:
         byearBox = document.querySelector("#yearIn")
         birth_year = int(byearBox.value)
+        dayErrorOut.innerText = ""
     except ValueError:
         yearErrorOut.innerText = "Please input a valid integer"
 

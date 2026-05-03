@@ -19,9 +19,6 @@ def getDay():
 
     if month == 2:
         leap = (year - 2000) / 4
-        leapCheck = int((year - 2000) / 4)
-        if leap == leapCheck:
-            leap = int(leap)
         if not isinstance(leap, int):
             monDays = 28
             leap = 'false'

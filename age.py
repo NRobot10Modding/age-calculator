@@ -40,7 +40,6 @@ def run(event):
     global document
     global output_div
 
-    global lt
     year = lt().tm_year
     month = lt().tm_mon
     day = lt().tm_mday

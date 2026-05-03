@@ -3,14 +3,15 @@
 from pyscript import document
 output_div = document.querySelector("#outputField")
 
-from time import localtime
-year = localtime().tm_year
-month = localtime().tm_mon
-day = localtime().tm_mday
-
 #-----------Prep---------
 
 def getDay():
+
+    from time import localtime
+    year = localtime().tm_year
+    month = localtime().tm_mon
+    day = localtime().tm_mday
+
     global leap
     leap = 'false'
     global monDays

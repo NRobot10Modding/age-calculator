@@ -71,13 +71,16 @@ def run(event):
 
     try:
         yearAge = year - birth_year
-    except UnboundLocalError
+    except UnboundLocalError:
+        return
     try:
         monAge = month - bmon
-    except UnboundLocalError
+    except UnboundLocalError:
+        return
     try:
         dayAge = day - bday
-    except UnboundLocalError
+    except UnboundLocalError:
+        return
 
     #-Determine whether or not the month should be classed as before your birthday or after and doing maths to use that and output
 

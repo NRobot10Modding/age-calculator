@@ -41,7 +41,7 @@ def run(event):
     global document
     global output_div
 
-    dayErrorout = document.querySelector("#dayError")
+    dayErrorOut = document.querySelector("#dayError")
     monErrorOut = document.querySelector("#monError")
     yearErrorOut = document.querySelector("#yearError")
 

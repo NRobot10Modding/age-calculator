@@ -68,7 +68,7 @@ def run(event):
     try:
         byearBox = document.querySelector("#yearIn")
         birth_year = int(byearBox.value)
-        dayErrorOut.innerText = ""
+        yearErrorOut.innerText = ""
     except ValueError:
         yearErrorOut.innerText = "Please input a valid integer"
 

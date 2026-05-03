@@ -41,14 +41,21 @@ def run(event):
     global document
     global output_div
 
+    dayErrorVar = document.querySelector(#dayError)
+    monErrorVar = document.querySelector(#monError)
+    yearErrorVar = document.querySelector(#yearError)
+
     year = lt().tm_year
     month = lt().tm_mon
     day = lt().tm_mday
 
     getDay()
-
-    bdayBox = document.querySelector("#dayIn")
-    bday = int(bdayBox.value)
+    
+    try:
+        bdayBox = document.querySelector("#dayIn")
+        bday = int(bdayBox.value)
+    except ValueError:
+        dayErrorVar.innerText = "Please input a valid integer"
     bmonBox = document.querySelector("#monIn")
     bmon = int(bmonBox.value)
     byearBox = document.querySelector("#yearIn")

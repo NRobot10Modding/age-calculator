@@ -35,15 +35,16 @@ def getDay():
 
 def run(event):
 
+    global year
+    global month
+    global document
+    global output_div
+
     global lt
     year = lt().tm_year
     month = lt().tm_mon
     day = lt().tm_mday
 
-    global month
-    global document
-    global output_div
-    
     getDay()
 
     bdayBox = document.querySelector("#dayIn")

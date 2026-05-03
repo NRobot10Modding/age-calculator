@@ -1,22 +1,18 @@
 #--------Get data--------
 
-def run(event):
+global document
+global output_div
 
-    global document
-    global output_div
+from pyscript import document as document
+output_div = document.querySelector("#outputField")
 
-    from pyscript import document as document
-    output_div = document.querySelector("#outputField")
-
-    from time import localtime
-    global year
-    year = localtime().tm_year
-    global month
-    month = localtime().tm_mon
-    global day
-    day = localtime().tm_mday
-    
-    calc()
+from time import localtime
+global year
+year = localtime().tm_year
+global month
+month = localtime().tm_mon
+global day
+day = localtime().tm_mday
 
 #-----------Prep---------
 
@@ -49,7 +45,7 @@ def getDay():
 
 #--------Get user data----------
 
-def calc():
+def run(event):
 
     global month
     global output_div

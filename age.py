@@ -1,6 +1,6 @@
 #--------Get data--------
 
-from pyscript import document as document
+from pyscript import document
 output_div = document.querySelector("#outputField")
 
 from time import localtime
@@ -42,6 +42,7 @@ def getDay():
 def run(event):
 
     global month
+    global document
     global output_div
     
     getDay()

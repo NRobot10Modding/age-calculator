@@ -41,9 +41,9 @@ def run(event):
     global document
     global output_div
 
-    dayErrorVar = document.querySelector(#dayError)
-    monErrorVar = document.querySelector(#monError)
-    yearErrorVar = document.querySelector(#yearError)
+    dayErrorVar = document.querySelector("#dayError")
+    monErrorVar = document.querySelector("#monError")
+    yearErrorVar = document.querySelector("#yearError")
 
     year = lt().tm_year
     month = lt().tm_mon

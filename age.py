@@ -1,6 +1,6 @@
 #--------Get data--------
 
-from time import local time as lt
+from time import localtime as lt
 from pyscript import document
 output_div = document.querySelector("#outputField")
 

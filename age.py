@@ -57,6 +57,7 @@ def run(event):
         dayErrorOut.innerText = ""
     except ValueError:
         dayErrorOut.innerText = "Please input a valid integer"
+        output_div.innerText = ""
 
     try:
         bmonBox = document.querySelector("#monIn")
@@ -64,6 +65,7 @@ def run(event):
         monErrorOut.innerText = ""
     except ValueError:
         monErrorOut.innerText = "Please input a valid integer"
+        output_div.innerText = ""
 
     try:
         byearBox = document.querySelector("#yearIn")
@@ -71,6 +73,7 @@ def run(event):
         yearErrorOut.innerText = ""
     except ValueError:
         yearErrorOut.innerText = "Please input a valid integer"
+        output_div.innerText = ""
 
     try:
         yearAge = year - birth_year

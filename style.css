@@ -4,9 +4,9 @@ body {
   padding: 0px;
 }
 
-.content {
+.output {
   background-color: #b5edc2;
-  border-radius: 25px 45px;
+  border-radius: 20px;
 }
 
 footer {

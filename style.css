@@ -17,15 +17,15 @@ button {
 }
 
 .dayError {
-  color: red;
+  color: #ff0000;
 }
 
 .monError {
-  color: red;
+  color: #ff0000;
 }
 
 .yearError {
-  color: red;
+  color: #ff0000;
 }
 
 .output {

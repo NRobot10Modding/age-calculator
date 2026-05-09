@@ -7,10 +7,12 @@ body {
 }
 
 input {
+  color: white;
   background-color: #454545;
 }
 
 button {
+  color: white;
   background-color: #454545;
 }
 

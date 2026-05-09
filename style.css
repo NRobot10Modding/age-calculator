@@ -3,7 +3,7 @@ mpy-config,mpy-script,py-config,py-script{display:none}.mpy-editor-box,.py-edito
 body {
   padding: 0px;
   background-color: #262626;
-  text-color: white;
+  color: white;
 }
 
 .output {

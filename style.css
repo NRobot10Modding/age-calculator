@@ -16,6 +16,18 @@ button {
   background-color: #454545;
 }
 
+.dayError {
+  color: red;
+}
+
+.monError {
+  color: red;
+}
+
+.yearError {
+  color: red;
+}
+
 .output {
   padding: 10px;
   color: black;

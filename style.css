@@ -6,6 +6,14 @@ body {
   color: white;
 }
 
+input {
+  background-color: #454545;
+}
+
+button {
+  background-color: #454545;
+}
+
 .output {
   padding: 10px;
   background-color: #b5edc2;

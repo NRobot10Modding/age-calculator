@@ -4,42 +4,36 @@ body {
   padding: 0px;
   background-color: #262626;
   color: white;
+}
+.content {
   font-family: 'Chokokutai';font-size: 22px;
 }
-
 h1 {
   font-family: 'Courier New', monospace;
 }
-
 input {
   color: white;
   background-color: #454545;
 }
-
 button {
   color: white;
   background-color: #454545;
 }
-
 .dayError {
   color: #ff0000;
 }
-
 .monError {
   color: #ff0000;
 }
-
 .yearError {
   color: #ff0000;
 }
-
 .output {
   padding: 10px;
   color: black;
   background-color: #b5edc2;
   border-radius: 20px;
 }
-
 footer {
   color: #454545;
   width: 100%;

@@ -118,7 +118,7 @@ def run(event):
                 month = bmon
                 getDay()
                 actualAge = f'You are {actY} years, {actMonth - 1} months and {((monDays - bday) + day) + 1} days old'
-    if (bmon == month) and ((dayAge * -1) <= 14):
+    if (bmon == month) and ((dayAge * -1) in range(1, 15)):
         bdaySoon = True
         wait = dayAge * -1
         weekWait = wait / 7

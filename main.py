@@ -9,7 +9,7 @@ output_div = document.querySelector("#outputField")
 def getDay():
 
     global leap
-    leap = 'false'
+    leap = False
     global monDays
     if month in (1, 3, 5, 7, 8, 10, 12):
         monDays = 31
@@ -18,10 +18,10 @@ def getDay():
         leap = (year - 2000) / 4
         if not isinstance(leap, int):
             monDays = 28
-            leap = 'false'
+            leap = False
         else:
             monDays = 29
-            leap = 'true'
+            leap = True
 
     if month in (4, 6, 9, 11):
         monDays = 30
@@ -88,7 +88,9 @@ def run(event):
     except UnboundLocalError:
         return
 
-    #-Determine whether or not the month should be classed as before your birthday or after and doing maths to use that and output
+    #-Determine whether or not the month should be classed as
+    #-before your birthday or after and doing
+    #-maths to use that and output the age
 
     if month > bmon:
         if day > bday:
@@ -101,17 +103,35 @@ def run(event):
         if (12 - bmon) + month == 12:
             actMonth = 0
             actY = yearAge
+            if day > bday:
+                actualAge = f'You are {actY} years, {actMonth} months and {dayAge} days old'
+            elif day == bday:
+                actualAge = f'You are {actY} years, {actMonth} months and {dayAge} days old'
+            else:
+                actualAge = f'You are {actY - 1} years, 11 months and {((monDays - bday) + day) + 1} days old'
         else:
             actMonth = (12 - bmon) + month
             actY = yearAge - 1
-        if day > bday:
-            actualAge = f'You are {actY} years, {actMonth} months and {dayAge} days old'
+            if day > bday:
+                actualAge = f'You are {actY} years, {actMonth} months and {dayAge} days old'
+            else:
+                month = bmon
+                getDay()
+                actualAge = f'You are {actY} years, {actMonth - 1} months and {((monDays - bday) + day) + 1} days old'
+    if (bmon == month) and ((dayAge * -1) <= 14):
+        bdaySoon = True
+        wait = dayAge * -1
+        weekWait = wait / 7
+        weekWaitFloored = int(round(weekWait, 0))
+        if wait >= 7:
+            happyBday = f'Your birthday is in (roughly) {weekWaitFloored} week(s)!'
         else:
-            month = bmon
-            getDay()
-            actualAge = f'You are {actY} years, {actMonth - 1} months and {((monDays - bday) + day) + 1} days old'
-
+            happyBday = f'Your birthday is in {wait} days!'
+    else:
+        bdaySoon = False
 
     #Tell the user how old they are :)
-
+    
+    if bdaySoon is True:
+        actualAge = f'{actualAge}\n{happyBday}'
     output_div.innerText = actualAge

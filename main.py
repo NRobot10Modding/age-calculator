@@ -58,6 +58,13 @@ def run(event):
     except ValueError:
         dayErrorOut.innerText = "Please input a valid integer"
         output_div.innerText = ""
+    else:
+        if bday not in range (1, 32):
+            dayErrorOut.innerText = "Please input a valid day"
+            output_div.innerText = ""
+        elif (birth_year == year) and (bmon == month) and (bday > day):
+            dayErrorOut.innerText = "That day is yet to come!"
+            output_div.innerText = ""
 
     try:
         bmonBox = document.querySelector("#monIn")

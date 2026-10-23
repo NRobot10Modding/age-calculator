@@ -66,6 +66,13 @@ def run(event):
     except ValueError:
         monErrorOut.innerText = "Please input a valid integer"
         output_div.innerText = ""
+    else:
+        if bmon < 0 or bmon > 12:
+            monErrorOut.innerText = "Please input a valid month"
+            output_div.innerText = ""
+        elif (birth_year == year) and (bmon > month):
+            monErrorOut.innerText = "That month is yet to come!"
+            output_div.innerText = ""
 
     try:
         byearBox = document.querySelector("#yearIn")

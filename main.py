@@ -52,21 +52,6 @@ def run(event):
     getDay()
     
     try:
-        bdayBox = document.querySelector("#dayIn")
-        bday = int(bdayBox.value)
-        dayErrorOut.innerText = ""
-    except ValueError:
-        dayErrorOut.innerText = "Please input a valid integer"
-        output_div.innerText = ""
-    else:
-        if bday not in range (1, 32):
-            dayErrorOut.innerText = "Please input a valid day"
-            output_div.innerText = ""
-        elif (birth_year == year) and (bmon == month) and (bday > day):
-            dayErrorOut.innerText = "That day is yet to come!"
-            output_div.innerText = ""
-
-    try:
         bmonBox = document.querySelector("#monIn")
         bmon = int(bmonBox.value)
         monErrorOut.innerText = ""
@@ -91,6 +76,21 @@ def run(event):
     else:
         if birth_year not in range((year - 150), (year + 1)):
             yearErrorOut.innerText = "Please input a valid year"
+            output_div.innerText = ""
+
+    try:
+        bdayBox = document.querySelector("#dayIn")
+        bday = int(bdayBox.value)
+        dayErrorOut.innerText = ""
+    except ValueError:
+        dayErrorOut.innerText = "Please input a valid integer"
+        output_div.innerText = ""
+    else:
+        if bday not in range (1, 32):
+            dayErrorOut.innerText = "Please input a valid day"
+            output_div.innerText = ""
+        elif (birth_year == year) and (bmon == month) and (bday > day):
+            dayErrorOut.innerText = "That day is yet to come!"
             output_div.innerText = ""
 
     try:

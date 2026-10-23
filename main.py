@@ -74,6 +74,9 @@ def run(event):
     except ValueError:
         yearErrorOut.innerText = "Please input a valid integer"
         output_div.innerText = ""
+    else:
+        if birth_year not in range((year - 150), (year + 1)):
+            yearErrorOut.innerText = "Please input a valid year"
 
     try:
         yearAge = year - birth_year

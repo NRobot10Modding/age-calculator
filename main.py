@@ -163,7 +163,7 @@ def run(event):
     
     if bdaySoon is True:
         actualAge = f'{actualAge}\n{happyBday}'
-    if (incorrectYearInput is False) and (incorrectMonthInput is False) and (incorrect DayInput is False):
+    if (incorrectYearInput is False) and (incorrectMonthInput is False) and (incorrectDayInput is False):
         output_div.innerText = actualAge
     else:
         output_div.innerText = ""

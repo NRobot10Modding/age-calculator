@@ -62,9 +62,9 @@ def run(event):
         if birth_year not in range((year - 150), (year + 1)):
             yearErrorOut.innerText = "Please input a valid year"
             output_div.innerText = ""
-            incorrectInput = True
+            incorrectYearInput = True
         else:
-            incorrectInput = False
+            incorrectYearInput = False
 
     try:
         bmonBox = document.querySelector("#monIn")
@@ -77,13 +77,13 @@ def run(event):
         if bmon < 0 or bmon > 12:
             monErrorOut.innerText = "Please input a valid month"
             output_div.innerText = ""
-            incorrectInput = True
+            incorrectMonthInput = True
         elif (birth_year == year) and (bmon > month):
             monErrorOut.innerText = "That month is yet to come!"
             output_div.innerText = ""
-            incorrectInput = True
+            incorrectMonthInput = True
         else:
-            incorrectInput = False
+            incorrectMonthInput = False
 
     try:
         bdayBox = document.querySelector("#dayIn")
@@ -96,13 +96,13 @@ def run(event):
         if bday not in range (1, 32):
             dayErrorOut.innerText = "Please input a valid day"
             output_div.innerText = ""
-            incorrectInput = True
+            incorrectDayInput = True
         elif (birth_year == year) and (bmon == month) and (bday > day):
             dayErrorOut.innerText = "That day is yet to come!"
             output_div.innerText = ""
-            incorrectInput = True
+            incorrectDayInput = True
         else:
-            incorrectInput = False
+            incorrectDayInput = False
 
     try:
         yearAge = year - birth_year
@@ -163,7 +163,7 @@ def run(event):
     
     if bdaySoon is True:
         actualAge = f'{actualAge}\n{happyBday}'
-    if incorrectInput is False:
+    if (incorrectYearInput is False) or (incorrectMonthInput is False) or (incorrect DayInput is False):
         output_div.innerText = actualAge
     else:
         output_div.innerText = ""

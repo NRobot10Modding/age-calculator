@@ -111,8 +111,10 @@ if (bmon == month) and ((dayAge * -1) <= 14):
     weekWaitFloored = int(round(weekWait, 0))
     if wait >= 7:
         happyBday = f'Your birthday is in (roughly) {weekWaitFloored} week(s)!'
-    else:
+    elif wait > 1:
         happyBday = f'Your birthday is in {wait} day(s)!'
+    else:
+        happyBday = 'Your birthday is tomorrow!'
 
 #-Tell the user how old they are :)
 

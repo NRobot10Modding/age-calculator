@@ -112,7 +112,7 @@ if (bmon == month) and ((dayAge * -1) <= 14):
     if wait >= 7:
         happyBday = f'Your birthday is in (roughly) {weekWaitFloored} week(s)!'
     else:
-        happyBday = f'Your birthday is in {wait} days!'
+        happyBday = f'Your birthday is in {wait} day(s)!'
 
 #-Tell the user how old they are :)
 

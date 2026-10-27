@@ -4,6 +4,14 @@ from time import localtime as lt
 from pyscript import document
 output_div = document.querySelector("#outputField")
 
+dayErrorOut = document.querySelector("#dayError")
+monErrorOut = document.querySelector("#monError")
+yearErrorOut = document.querySelector("#yearError")
+
+byearBox  = document.querySelector("#yearIn")
+bmonBox = document.querySelector("#monIn")
+bdayBox = document.querySelector("#dayIn")
+
 #-----------Prep---------
 
 def getDay():
@@ -41,10 +49,6 @@ def run(event):
     global document
     global output_div
 
-    dayErrorOut = document.querySelector("#dayError")
-    monErrorOut = document.querySelector("#monError")
-    yearErrorOut = document.querySelector("#yearError")
-
     year = lt().tm_year
     month = lt().tm_mon
     day = lt().tm_mday
@@ -52,7 +56,6 @@ def run(event):
     getDay()
     
     try:
-        byearBox = document.querySelector("#yearIn")
         birth_year = int(byearBox.value)
         yearErrorOut.innerText = ""
     except ValueError:
@@ -67,7 +70,6 @@ def run(event):
             incorrectYearInput = False
 
     try:
-        bmonBox = document.querySelector("#monIn")
         bmon = int(bmonBox.value)
         monErrorOut.innerText = ""
     except ValueError:
@@ -86,7 +88,6 @@ def run(event):
             incorrectMonthInput = False
 
     try:
-        bdayBox = document.querySelector("#dayIn")
         bday = int(bdayBox.value)
         dayErrorOut.innerText = ""
     except ValueError:
@@ -147,7 +148,7 @@ def run(event):
                 month = bmon
                 getDay()
                 actualAge = f'You are {actY} years, {actMonth - 1} months and {((monDays - bday) + day) + 1} days old'
-    if (bmon == month) and ((dayAge * -1) in range(1, 15)):
+    if (bmon == month) and ((dayAge * -1) in range(0, 15)):
         bdaySoon = True
         wait = dayAge * -1
         weekWait = wait / 7
@@ -156,6 +157,8 @@ def run(event):
             happyBday = f'Your birthday is in (roughly) {weekWaitFloored} week(s)!'
         elif wait > 1:
             happyBday = f'Your birthday is in {wait} days!'
+        elif wait == 0:
+            happBday = 'HAPPY BIRTHDAY!'
         else:
             happyBday = 'Your birthday is tomorrow!'
     else:

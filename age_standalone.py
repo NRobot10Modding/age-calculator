@@ -113,6 +113,8 @@ if (bmon == month) and ((dayAge * -1) <= 14):
         happyBday = f'Your birthday is in (roughly) {weekWaitFloored} week(s)!'
     elif wait > 1:
         happyBday = f'Your birthday is in {wait} day(s)!'
+    elif wait == 0:
+        happyBday = 'HAPPY BIRTHDAY!'
     else:
         happyBday = 'Your birthday is tomorrow!'
 

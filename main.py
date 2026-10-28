@@ -157,8 +157,8 @@ def run(event):
             happyBday = f'Your birthday is in (roughly) {weekWaitFloored} week(s)!'
         elif wait > 1:
             happyBday = f'Your birthday is in {wait} days!'
-        elif dayAge == 0:
-            happBday = 'HAPPY BIRTHDAY!'
+        elif wait == 0:
+            happyBday = 'HAPPY BIRTHDAY!'
         else:
             happyBday = 'Your birthday is tomorrow!'
     else:
